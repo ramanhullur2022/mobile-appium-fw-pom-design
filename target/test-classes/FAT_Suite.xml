@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="FAT_Suite">
+  <test name="FAT_Test_Cases">
+    <classes>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC001_FAT"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC003_FAT"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC004_FAT"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC006_FAT"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1989_TC001_FAT"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1989_TC002_FAT"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1990_TC001_FAT"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1990_TC002_FAT"/>
+    </classes>
+  </test> 
+</suite>

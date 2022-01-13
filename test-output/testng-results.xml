@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="10" total="30" passed="20">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RegressionSuite" duration-ms="4332403" started-at="2020-09-04T16:27:46 IST" finished-at="2020-09-04T17:39:59 IST">
+    <groups>
+    </groups>
+    <test name="AllTests" duration-ms="4332403" started-at="2020-09-04T16:27:46 IST" finished-at="2020-09-04T17:39:59 IST">
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Contacts">
+        <test-method status="PASS" signature="add_remove_add_contact()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Contacts@15c43bd9]" name="add_remove_add_contact" duration-ms="256307" started-at="2020-09-04T17:33:00 IST" finished-at="2020-09-04T17:37:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_remove_add_contact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Contacts@15c43bd9]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-09-04T17:37:17 IST" finished-at="2020-09-04T17:37:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="add_remove_contact()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Contacts@15c43bd9]" name="add_remove_contact" duration-ms="161933" started-at="2020-09-04T17:37:17 IST" finished-at="2020-09-04T17:39:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_remove_contact -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Contacts@15c43bd9]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-09-04T17:39:59 IST" finished-at="2020-09-04T17:39:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_UDEMA_Contacts -->
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1990_TC001">
+        <test-method status="PASS" signature="send_reply_from_teacher_to_student()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1990_TC001@1725dc0f]" name="send_reply_from_teacher_to_student" duration-ms="107740" started-at="2020-09-04T16:59:36 IST" finished-at="2020-09-04T17:01:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_reply_from_teacher_to_student -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1990_TC001@1725dc0f]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:01:24 IST" finished-at="2020-09-04T17:01:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_UDEMA_1990_TC001 -->
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Svar_Av_Sporsmal_TC003">
+        <test-method status="PASS" signature="send_Receive_New_Message_with_Spørsmål()[pri:0, instance:com.ude.portalen.testcases.TC_SendMsg_Svar_Av_Sporsmal_TC003@6ca8564a]" name="send_Receive_New_Message_with_Spørsmål" duration-ms="356491" started-at="2020-09-04T16:37:34 IST" finished-at="2020-09-04T16:43:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_Receive_New_Message_with_Spørsmål -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_SendMsg_Svar_Av_Sporsmal_TC003@6ca8564a]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T16:43:31 IST" finished-at="2020-09-04T16:43:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_SendMsg_Svar_Av_Sporsmal_TC003 -->
+      <class name="com.ude.portalen.testcases.TC_Settings_Enable_MsgByEmail_TC003">
+        <test-method status="PASS" signature="disableMessageByEmail()[pri:0, instance:com.ude.portalen.testcases.TC_Settings_Enable_MsgByEmail_TC003@50a638b5]" name="disableMessageByEmail" duration-ms="430400" started-at="2020-09-04T16:27:46 IST" finished-at="2020-09-04T16:34:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableMessageByEmail -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_Settings_Enable_MsgByEmail_TC003@50a638b5]" name="tearDown" is-config="true" duration-ms="4" started-at="2020-09-04T16:34:57 IST" finished-at="2020-09-04T16:34:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_Settings_Enable_MsgByEmail_TC003 -->
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_JA_TC006">
+        <test-method status="PASS" signature="sendAndVerifySporsmalReply()[pri:0, instance:com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_JA_TC006@31368b99]" name="sendAndVerifySporsmalReply" duration-ms="479903" started-at="2020-09-04T16:51:36 IST" finished-at="2020-09-04T16:59:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendAndVerifySporsmalReply -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_JA_TC006@31368b99]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-09-04T16:59:36 IST" finished-at="2020-09-04T16:59:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_JA_TC006 -->
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC004">
+        <test-method status="PASS" signature="send_Receive_New_SMS_melding()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1984_TC004@76508ed1]" name="send_Receive_New_SMS_melding" duration-ms="340868" started-at="2020-09-04T17:06:57 IST" finished-at="2020-09-04T17:12:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_Receive_New_SMS_melding -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1984_TC004@76508ed1]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:12:38 IST" finished-at="2020-09-04T17:12:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_UDEMA_1984_TC004 -->
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1986_TC002">
+        <test-method status="PASS" signature="send_Receive_New_Message_to_Teacher()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1986_TC002@4ac3c60d]" name="send_Receive_New_Message_to_Teacher" duration-ms="106231" started-at="2020-09-04T17:03:18 IST" finished-at="2020-09-04T17:05:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_Receive_New_Message_to_Teacher -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1986_TC002@4ac3c60d]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:05:04 IST" finished-at="2020-09-04T17:05:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_UDEMA_1986_TC002 -->
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC006">
+        <test-method status="PASS" signature="send_Receive_New_Message_to_Teacher()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1984_TC006@4facf68f]" name="send_Receive_New_Message_to_Teacher" duration-ms="113183" started-at="2020-09-04T17:05:04 IST" finished-at="2020-09-04T17:06:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_Receive_New_Message_to_Teacher -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1984_TC006@4facf68f]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-09-04T17:06:57 IST" finished-at="2020-09-04T17:06:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_UDEMA_1984_TC006 -->
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1986_TC003">
+        <test-method status="PASS" signature="send_Receive_New_Message_with_Svar_Av()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1986_TC003@3911c2a7]" name="send_Receive_New_Message_with_Svar_Av" duration-ms="113935" started-at="2020-09-04T17:01:24 IST" finished-at="2020-09-04T17:03:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- send_Receive_New_Message_with_Svar_Av -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_1986_TC003@3911c2a7]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:03:18 IST" finished-at="2020-09-04T17:03:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_UDEMA_1986_TC003 -->
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Filter">
+        <test-method status="PASS" signature="select_avsender_multiple_contact_home()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="select_avsender_multiple_contact_home" duration-ms="113171" started-at="2020-09-04T17:12:38 IST" finished-at="2020-09-04T17:14:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_avsender_multiple_contact_home -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:14:31 IST" finished-at="2020-09-04T17:14:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="select_avsender_single_contact_arkiv_mottatt()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="select_avsender_single_contact_arkiv_mottatt" duration-ms="119568" started-at="2020-09-04T17:14:31 IST" finished-at="2020-09-04T17:16:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_avsender_single_contact_arkiv_mottatt -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:16:31 IST" finished-at="2020-09-04T17:16:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="select_avsender_single_contact_home()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="select_avsender_single_contact_home" duration-ms="111490" started-at="2020-09-04T17:16:31 IST" finished-at="2020-09-04T17:18:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_avsender_single_contact_home -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:18:22 IST" finished-at="2020-09-04T17:18:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="select_foresatte_icon_contact_home()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="select_foresatte_icon_contact_home" duration-ms="150843" started-at="2020-09-04T17:18:22 IST" finished-at="2020-09-04T17:20:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_foresatte_icon_contact_home -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-09-04T17:20:53 IST" finished-at="2020-09-04T17:20:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="select_sporsmal_avsender_multiple_contact_arkiv_mottatt()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="select_sporsmal_avsender_multiple_contact_arkiv_mottatt" duration-ms="328853" started-at="2020-09-04T17:20:53 IST" finished-at="2020-09-04T17:26:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_sporsmal_avsender_multiple_contact_arkiv_mottatt -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:26:22 IST" finished-at="2020-09-04T17:26:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="select_student_icon_contact_home()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="select_student_icon_contact_home" duration-ms="147309" started-at="2020-09-04T17:26:22 IST" finished-at="2020-09-04T17:28:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_student_icon_contact_home -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-09-04T17:28:49 IST" finished-at="2020-09-04T17:28:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="select_uleste_meldinger_avsender_multiple_contact_arkiv_mottatt()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="select_uleste_meldinger_avsender_multiple_contact_arkiv_mottatt" duration-ms="127732" started-at="2020-09-04T17:28:49 IST" finished-at="2020-09-04T17:30:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_uleste_meldinger_avsender_multiple_contact_arkiv_mottatt -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:30:57 IST" finished-at="2020-09-04T17:30:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="select_uleste_meldinger_avsender_single_contact_arkiv_mottatt()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="select_uleste_meldinger_avsender_single_contact_arkiv_mottatt" duration-ms="123261" started-at="2020-09-04T17:30:57 IST" finished-at="2020-09-04T17:33:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_uleste_meldinger_avsender_single_contact_arkiv_mottatt -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_UDEMA_Filter@41e36e46]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T17:33:00 IST" finished-at="2020-09-04T17:33:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_UDEMA_Filter -->
+      <class name="com.ude.portalen.testcases.TC_SendMsg_TwoStudents_TC009">
+        <test-method status="PASS" signature="sendAMessageToMultipleStudents()[pri:0, instance:com.ude.portalen.testcases.TC_SendMsg_TwoStudents_TC009@1817d444]" name="sendAMessageToMultipleStudents" duration-ms="157510" started-at="2020-09-04T16:34:57 IST" finished-at="2020-09-04T16:37:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendAMessageToMultipleStudents -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_SendMsg_TwoStudents_TC009@1817d444]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-09-04T16:37:34 IST" finished-at="2020-09-04T16:37:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_SendMsg_TwoStudents_TC009 -->
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_NEI_TC005">
+        <test-method status="PASS" signature="sendAndVerifySporsmalReply()[pri:0, instance:com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_NEI_TC005@50b472aa]" name="sendAndVerifySporsmalReply" duration-ms="485130" started-at="2020-09-04T16:43:31 IST" finished-at="2020-09-04T16:51:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendAndVerifySporsmalReply -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_NEI_TC005@50b472aa]" name="tearDown" is-config="true" duration-ms="2" started-at="2020-09-04T16:51:36 IST" finished-at="2020-09-04T16:51:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_NEI_TC005 -->
+    </test> <!-- AllTests -->
+  </suite> <!-- RegressionSuite -->
+</testng-results>

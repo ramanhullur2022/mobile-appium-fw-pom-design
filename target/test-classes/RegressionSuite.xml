@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="RegressionSuite">
+  <test name="AllTests">
+  
+   <classes>
+  
+      <class name="com.ude.portalen.testcases.TC_Settings_Enable_MsgByEmail_TC003"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_TwoStudents_TC009"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Svar_Av_Sporsmal_TC003"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_NEI_TC005"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_JA_TC006"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1990_TC001"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1986_TC003"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1986_TC002"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC006"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC004"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Filter"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Contacts"/>
+    
+    </classes>
+  
+  <!-- 
+    <classes>
+      
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Filter"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Contacts"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Login"/>
+      
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC001"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC003"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC004"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC006"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1984_TC007"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1986_TC001"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1986_TC002"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1986_TC003"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1987"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1989_TC001"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1989_TC002"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1989_TC003"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1990_TC001"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1990_TC002"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1990_TC003"/>
+      
+      <class name="com.ude.portalen.testcases.TC_SendMsg_OnlyEleven_TC007"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_OnlyForesatte_TC008"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_SendAttachment_TC001"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_JA_TC006"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Sporsmal_Reply_NEI_TC005"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Svar_Av_Sporsmal_TC003"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_Svar_Pa_Sporsmal_TC004"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_SvarPa_TC002"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_TwoStudents_TC009"/>
+      <class name="com.ude.portalen.testcases.TC_SendMsg_TwoTeacher_TC001" />
+      <class name="com.ude.portalen.testcases.TC_SendReceive_Attachment_TC001"/>
+      <class name="com.ude.portalen.testcases.TC_SendReceive_Attachment_TC002"/>
+      <class name="com.ude.portalen.testcases.TC_SendReceive_Attachment_TC003"/>
+      <class name="com.ude.portalen.testcases.TC_SendReceive_Attachment_TC004"/>
+      <class name="com.ude.portalen.testcases.TC_Settings_Disable_MsgByEmail_TC002"/>
+      <class name="com.ude.portalen.testcases.TC_Settings_Enable_MsgByEmail_TC003"/>
+      
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Profiles_TC001"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Profiles_TC002"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_Profiles_TC003"/>
+     
+      <class name="com.ude.portalen.testcases.TC_Settings_ResetPIN_TC001"/>
+      
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1983"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1985_New"/>
+      <class name="com.ude.portalen.testcases.TC_UDEMA_1988"/>
+      
+    </classes>
+     -->
+    
+    
+    
+    
+    
+  </test> 
+</suite>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">PushNotifications</th></tr>
+<tr><td><a href="#t0">Notifications</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">1,193,859</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PushNotifications</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Notifications &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ude.portalen.testcases.TC_UDEMA_1983</td><td><a href="#m0">Parent_Receive_Push_Notification</a></td><td rowspan="1">1592540972446</td><td rowspan="1">70806</td></tr><tr class="failedodd"><td rowspan="1">com.ude.portalen.testcases.TC_UDEMA_1985_New</td><td><a href="#m1">Parent_Receive_Push_Notification</a></td><td rowspan="1">1592541280567</td><td rowspan="1">60316</td></tr><tr class="failedeven"><td rowspan="1">com.ude.portalen.testcases.TC_UDEMA_1988</td><td><a href="#m2">Parent_Receive_Push_Notification</a></td><td rowspan="1">1592541655000</td><td rowspan="1">194974</td></tr><tr><th colspan="4">Notifications &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.ude.portalen.testcases.TC_UDEMA_1983</td><td><a href="#m3">Student_Receive_Push_Notification</a></td><td rowspan="1">1592541043890</td><td rowspan="1">94265</td></tr><tr class="passedeven"><td><a href="#m4">teacher_Receive_Push_Notification</a></td><td rowspan="1">1592541139920</td><td rowspan="1">140624</td></tr><tr class="passedodd"><td rowspan="2">com.ude.portalen.testcases.TC_UDEMA_1985_New</td><td><a href="#m5">Student_Receive_Push_Notification</a></td><td rowspan="1">1592541342896</td><td rowspan="1">195516</td></tr><tr class="passedodd"><td><a href="#m6">teacher_Receive_Push_Notification</a></td><td rowspan="1">1592541538432</td><td rowspan="1">116542</td></tr><tr class="passedeven"><td rowspan="2">com.ude.portalen.testcases.TC_UDEMA_1988</td><td><a href="#m7">Student_Receive_Push_Notification</a></td><td rowspan="1">1592541850987</td><td rowspan="1">188745</td></tr><tr class="passedeven"><td><a href="#m8">teacher_Receive_Push_Notification</a></td><td rowspan="1">1592542039798</td><td rowspan="1">126424</td></tr></tbody>
+</table>
+<h2>Notifications</h2><h3 id="m0">com.ude.portalen.testcases.TC_UDEMA_1983#Parent_Receive_Push_Notification</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at com.ude.portalen.generic.Base_Class.captureScreenExtent(Base_Class.java:186)
+	at com.ude.portalen.testcases.TC_UDEMA_1983.Parent_Receive_Push_Notification(TC_UDEMA_1983.java:148)
+	at java.util.ArrayList.forEach(ArrayList.java:1255)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.ude.portalen.testcases.TC_UDEMA_1985_New#Parent_Receive_Push_Notification</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:c8e:9407:8b33:f291%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:289)
+	at com.ude.portalen.generic.Base_Class.captureScreenExtent(Base_Class.java:186)
+	at com.ude.portalen.testcases.TC_UDEMA_1985_New.Parent_Receive_Push_Notification(TC_UDEMA_1985_New.java:152)
+	at java.util.ArrayList.forEach(ArrayList.java:1255)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.ude.portalen.testcases.TC_UDEMA_1988#Parent_Receive_Push_Notification</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:c8e:9407:8b33:f291%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:289)
+	at com.ude.portalen.generic.Base_Class.captureScreenExtent(Base_Class.java:186)
+	at com.ude.portalen.testcases.TC_UDEMA_1988.Parent_Receive_Push_Notification(TC_UDEMA_1988.java:302)
+	at java.util.ArrayList.forEach(ArrayList.java:1255)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.ude.portalen.testcases.TC_UDEMA_1983#Student_Receive_Push_Notification</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.ude.portalen.testcases.TC_UDEMA_1983#teacher_Receive_Push_Notification</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.ude.portalen.testcases.TC_UDEMA_1985_New#Student_Receive_Push_Notification</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.ude.portalen.testcases.TC_UDEMA_1985_New#teacher_Receive_Push_Notification</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.ude.portalen.testcases.TC_UDEMA_1988#Student_Receive_Push_Notification</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.ude.portalen.testcases.TC_UDEMA_1988#teacher_Receive_Push_Notification</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

@@ -1,0 +1,4748 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/39026ad/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>UDE Portalen Mobile App</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+      
+        
+      
+    
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Functional</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Aug 27, 2020 09:49:15 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='12.329%'><span class='strong'>9</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='87.671%'>64</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1983_TC003</span>
+						<span class='test-time'>Aug 27, 2020 09:49:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 09:49:15 PM</span>
+	<span class='label end-time'>Aug 27, 2020 09:49:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Parent receiving new push notification message from Teacher in active and background app state and open the push notification message from mobile app </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:50:28 PM</td>
+				<td class='step-details'>
+						Portalen_Web_URL launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:50:28 PM</td>
+				<td class='step-details'>
+						Portalen website launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:51:00 PM</td>
+				<td class='step-details'>
+						Portalen_Forsatte_App_Login_Successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:51:35 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:51:35 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal  successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:53:53 PM</td>
+				<td class='step-details'>
+						Mail ScreenShot
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/send_mail_success1598545433183_1598545433676.png' src='./test-output/screenshots/send_mail_success1598545433183_1598545433676.png' data-src='./test-output/screenshots/send_mail_success1598545433183_1598545433676.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:53:53 PM</td>
+				<td class='step-details'>
+						Teacher Inger sent mail successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:53:53 PM</td>
+				<td class='step-details'>
+						Teacher Inger sent mail successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:54:07 PM</td>
+				<td class='step-details'>
+						TestCase Step Pass
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/notification_bar_1598545447681.png' src='./test-output/screenshots/notification_bar_1598545447681.png' data-src='./test-output/screenshots/notification_bar_1598545447681.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:54:12 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Teacher logging from web portelan and sending the push notification to Parent with NoSuchElementException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1983_TC002</span>
+						<span class='test-time'>Aug 27, 2020 09:54:13 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 09:54:13 PM</span>
+	<span class='label end-time'>Aug 27, 2020 09:54:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Student receive new push notification message from Teacher in active and background app state and open the push notification message </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:55:24 PM</td>
+				<td class='step-details'>
+						Portalen_Web_URL launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:55:24 PM</td>
+				<td class='step-details'>
+						Portalen website launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:55:53 PM</td>
+				<td class='step-details'>
+						Portalen_Elev_App_Login_Successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:56:26 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:56:26 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal  successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:58:49 PM</td>
+				<td class='step-details'>
+						Mail ScreenShot
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/send_mail_success1598545729261_1598545729726.png' src='./test-output/screenshots/send_mail_success1598545729261_1598545729726.png' data-src='./test-output/screenshots/send_mail_success1598545729261_1598545729726.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:58:49 PM</td>
+				<td class='step-details'>
+						Teacher Inger sent mail successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:58:49 PM</td>
+				<td class='step-details'>
+						Teacher Inger sent mail successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:58:59 PM</td>
+				<td class='step-details'>
+						TestCase Step Pass
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/notification_bar_1598545739880.png' src='./test-output/screenshots/notification_bar_1598545739880.png' data-src='./test-output/screenshots/notification_bar_1598545739880.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:59:13 PM</td>
+				<td class='step-details'>
+						Notification bar opened and clicked on notification
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:59:13 PM</td>
+				<td class='step-details'>
+						Notification bar opened and clicked on notification
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:59:13 PM</td>
+				<td class='step-details'>
+						TestCase Step Pass
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/notification_1598545753929.png' src='./test-output/screenshots/notification_1598545753929.png' data-src='./test-output/screenshots/notification_1598545753929.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:59:19 PM</td>
+				<td class='step-details'>
+						Test FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:59:19 PM</td>
+				<td class='step-details'>
+						Test case execution is failed to complete, varification gets failed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1983_TC001</span>
+						<span class='test-time'>Aug 27, 2020 09:59:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 09:59:20 PM</span>
+	<span class='label end-time'>Aug 27, 2020 09:59:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher(inlaa014) receiving new push notifications message from Student(alana041) in active and background app state and opening the push notification message from app </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:00:31 PM</td>
+				<td class='step-details'>
+						Portalen Web URL launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:00:31 PM</td>
+				<td class='step-details'>
+						Portalen Website launched and login screen displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:00:56 PM</td>
+				<td class='step-details'>
+						Portalen_Elev_App_Login_Successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:01:31 PM</td>
+				<td class='step-details'>
+						Student(alana041) is login into web portal is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:01:31 PM</td>
+				<td class='step-details'>
+						Student(alana041) is login into web portal is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:02:52 PM</td>
+				<td class='step-details'>
+						Clicked on NyMelding then selected the receipient IngerLaerer and added message title and body. Clicked on sent button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:01 PM</td>
+				<td class='step-details'>
+						TestCase Passed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/send_mail_success1598545980588_1598545981049.png' src='./test-output/screenshots/send_mail_success1598545980588_1598545981049.png' data-src='./test-output/screenshots/send_mail_success1598545980588_1598545981049.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:01 PM</td>
+				<td class='step-details'>
+						Student(alela010) sent mail successfully and verified from Sendte meldinger
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:01 PM</td>
+				<td class='step-details'>
+						Student(alela010) sent mail successfully and verified from Sendte meldinger
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:13 PM</td>
+				<td class='step-details'>
+						TestCase Step Pass
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/notification_bar_1598545993772.png' src='./test-output/screenshots/notification_bar_1598545993772.png' data-src='./test-output/screenshots/notification_bar_1598545993772.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:26 PM</td>
+				<td class='step-details'>
+						Notification bar opened and clicked on notification
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:26 PM</td>
+				<td class='step-details'>
+						Notification bar opened and clicked on notification
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:28 PM</td>
+				<td class='step-details'>
+						TestCase Step Pass
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/notification_1598546008485.png' src='./test-output/screenshots/notification_1598546008485.png' data-src='./test-output/screenshots/notification_1598546008485.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:33 PM</td>
+				<td class='step-details'>
+						Test PASSED
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:03:33 PM</td>
+				<td class='step-details'>
+						Test case execution is completed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1985_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:03:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:03:36 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:03:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Foresatte mottar ny push-varselmelding fra lærer (inlaa014) i lukket apptilstand og åpner pushvarslingsmeldingen fra appen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:46 PM</td>
+				<td class='step-details'>
+						Portalen_Web_URL launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:04:46 PM</td>
+				<td class='step-details'>
+						Portalen website launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:48 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:05:48 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal  successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:08:11 PM</td>
+				<td class='step-details'>
+						Mail ScreenShot
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/send_mail_success1598546290706_1598546291155.png' src='./test-output/screenshots/send_mail_success1598546290706_1598546291155.png' data-src='./test-output/screenshots/send_mail_success1598546290706_1598546291155.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:08:11 PM</td>
+				<td class='step-details'>
+						Teacher Inger sent mail successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:08:11 PM</td>
+				<td class='step-details'>
+						Teacher Inger sent mail successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:08:27 PM</td>
+				<td class='step-details'>
+						TestCase Step Pass
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/notification_bar_1598546307045.png' src='./test-output/screenshots/notification_bar_1598546307045.png' data-src='./test-output/screenshots/notification_bar_1598546307045.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:09:03 PM</td>
+				<td class='step-details'>
+						Notification bar opened and clicked on notification
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:09:03 PM</td>
+				<td class='step-details'>
+						Notification bar opened and clicked on notification
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:09:04 PM</td>
+				<td class='step-details'>
+						Notification Clicked
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/notification_1598546344975.png' src='./test-output/screenshots/notification_1598546344975.png' data-src='./test-output/screenshots/notification_1598546344975.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1985_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:09:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:09:15 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:09:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Eleven (alana041) mottar ny push-varselmelding fra lærer (alela014) i lukket apptilstand og åpner pushvarslingsmeldingen fra appen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:10:26 PM</td>
+				<td class='step-details'>
+						Portalen_Web_URL launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:10:26 PM</td>
+				<td class='step-details'>
+						Portalen website launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:11:28 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:11:28 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal  successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:13:47 PM</td>
+				<td class='step-details'>
+						Mail ScreenShot
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/send_mail_success1598546627299_1598546627752.png' src='./test-output/screenshots/send_mail_success1598546627299_1598546627752.png' data-src='./test-output/screenshots/send_mail_success1598546627299_1598546627752.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:13:47 PM</td>
+				<td class='step-details'>
+						Teacher Inger sent mail successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:13:47 PM</td>
+				<td class='step-details'>
+						Teacher Inger sent mail successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:13:53 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/message_sent_failed1598546632343_1598546633660.png' src='./test-output/screenshots/message_sent_failed1598546632343_1598546633660.png' data-src='./test-output/screenshots/message_sent_failed1598546632343_1598546633660.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:13:53 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:13:53 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logg deg på Portalen web som lærer (inla014) og sender en melding til Elev (alana041)  med InvalidElementStateException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1985_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:13:54 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:13:54 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:13:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Lærer (inlaa014) mottar ny push-varselmelding fra Elev (alana041) i lukket apptilstand og åpner deretter pushvarslingsmeldingen i mobilappen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:14:34 PM</td>
+				<td class='step-details'>
+						test saken er mislykket
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/message_sent_failed1598546674006_1598546674704.png' src='./test-output/screenshots/message_sent_failed1598546674006_1598546674704.png' data-src='./test-output/screenshots/message_sent_failed1598546674006_1598546674704.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:14:34 PM</td>
+				<td class='step-details'>
+						test saken er mislykket
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:14:34 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logg inn på Portalen nett som en Elev og sender melding til læreren med TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1988_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:14:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:14:35 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:14:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Lærer som sender en pushvarslingsmelding til Foresatte med aktiv og åpnet appstatus og foreldre åpner pushvarslingsmeldingen fra appen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:15:04 PM</td>
+				<td class='step-details'>
+						Portalen Web URL launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:15:04 PM</td>
+				<td class='step-details'>
+						Portalen Website launched and login screen displayed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1988_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:15:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:15:18 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:15:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Lærer sender pushvarslingsmeldingen til Student inaktiv og åpnet appstatus og åpner pushvarslingsmeldingen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:15:46 PM</td>
+				<td class='step-details'>
+						Portalen_Web_URL launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:15:46 PM</td>
+				<td class='step-details'>
+						Portalen website launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:16:12 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/message_sent_failed_1598546772212.png' src='./test-output/screenshots/message_sent_failed_1598546772212.png' data-src='./test-output/screenshots/message_sent_failed_1598546772212.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:16:12 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='error'>
+				<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+				<td class='timestamp'>10:16:12 PM</td>
+				<td class='step-details'>
+						Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //android.widget.TextView[@text='Logg inn']' (tried for 5 second(s) with 500 milliseconds interval)
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:16:12 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logger på som Elev med TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1988_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:16:15 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:16:15 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:16:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Eleven sender Push-varselmeldingen til læreren fra aktiv og åpnet statusapp og åpner pushvarslingsmeldingen fra appen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:16:49 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:16:49 PM</td>
+				<td class='step-details'>
+						Teacher Inger is login in web portal  successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:17:18 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logger på som lærer med TimeoutException.
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:17:20 PM</td>
+				<td class='step-details'>
+						Bekreftelse av testsak mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/message_sent_failed_1598546840383.png' src='./test-output/screenshots/message_sent_failed_1598546840383.png' data-src='./test-output/screenshots/message_sent_failed_1598546840383.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:17:20 PM</td>
+				<td class='step-details'>
+						Bekreftelse av testsak mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:17:24 PM</td>
+				<td class='step-details'>
+						Portalen Web URL launched
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:17:24 PM</td>
+				<td class='step-details'>
+						Portalen Website launched and login screen displayed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:17:22 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:17:22 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:17:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Uleste Meldinger filter in Arkiv Mottatt folder and verify messages with unread messages are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:17:22 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:18:26 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Uleste Meldinger Filter Failed_1598546906734.png' src='./test-output/screenshots/Uleste Meldinger Filter Failed_1598546906734.png' data-src='./test-output/screenshots/Uleste Meldinger Filter Failed_1598546906734.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:18:26 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:18:26 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger filter failed to filter unread messages in Arkiv Mottatt folder
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:18:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:18:28 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:18:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Uleste Meldinger filter in home and verify unread messages are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:18:28 PM</td>
+				<td class='step-details'>
+						Starting Login of alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:19:18 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Uleste Meldinger Filter Failed_1598546958656.png' src='./test-output/screenshots/Uleste Meldinger Filter Failed_1598546958656.png' data-src='./test-output/screenshots/Uleste Meldinger Filter Failed_1598546958656.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:19:18 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:19:18 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger filter failed to filter unread messages
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC005</span>
+						<span class='test-time'>Aug 27, 2020 10:19:19 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:19:19 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:19:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Uleste meldinger and Sporsmal filter in home and verify unread messages with Sporsmal tag are displayed in Arkiv Mottatt folder </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:19:19 PM</td>
+				<td class='step-details'>
+						Starting Login of alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:20:09 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger and Sporsmal Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Uleste Meldinger and Sporsmal Filter Failed_1598547009602.png' src='./test-output/screenshots/Uleste Meldinger and Sporsmal Filter Failed_1598547009602.png' data-src='./test-output/screenshots/Uleste Meldinger and Sporsmal Filter Failed_1598547009602.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:20:09 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:20:09 PM</td>
+				<td class='step-details'>
+						Uleste meldinger and Sporsmal filter failed to filter unread messages with Sporsmal tag in Arkiv Mottatt folder
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:20:10 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:20:10 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:20:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Uleste meldinger and Sporsmal filter in home and verify unread messages with Sporsmal tag are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:20:10 PM</td>
+				<td class='step-details'>
+						Starting Login of alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:20:59 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Uleste Meldinger Filter Failed_1598547059645.png' src='./test-output/screenshots/Uleste Meldinger Filter Failed_1598547059645.png' data-src='./test-output/screenshots/Uleste Meldinger Filter Failed_1598547059645.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:20:59 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:20:59 PM</td>
+				<td class='step-details'>
+						Uleste meldinger and Sporsmal filter failed to filter unread messages with Sporsmal tag
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC005</span>
+						<span class='test-time'>Aug 27, 2020 10:21:01 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:21:01 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:21:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select multiple contact under Avsender filter in home and verify messages from selected contacts are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:21:01 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:21:49 PM</td>
+				<td class='step-details'>
+						Multiple contact from Avsender Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Multiple contact from Avsender Filter Failed_1598547109942.png' src='./test-output/screenshots/Multiple contact from Avsender Filter Failed_1598547109942.png' data-src='./test-output/screenshots/Multiple contact from Avsender Filter Failed_1598547109942.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:21:49 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:21:49 PM</td>
+				<td class='step-details'>
+						Multiple contact from Avsender filter failed to filter messages from Multiple contact
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC004</span>
+						<span class='test-time'>Aug 27, 2020 10:21:51 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:21:51 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:21:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select any contact under Avsender filter in Arkiv Mottatt folder and verify messages from selected contact is displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:21:51 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:22:40 PM</td>
+				<td class='step-details'>
+						Single contact from Avsender Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Single contact from Avsender Filter Failed_1598547160440.png' src='./test-output/screenshots/Single contact from Avsender Filter Failed_1598547160440.png' data-src='./test-output/screenshots/Single contact from Avsender Filter Failed_1598547160440.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:22:40 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:22:40 PM</td>
+				<td class='step-details'>
+						Single contact from Avsender filter failed to filter messages from Single contact
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC004</span>
+						<span class='test-time'>Aug 27, 2020 10:22:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:22:41 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:22:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select any contact under Avsender filter in home and verify messages from selected contact is displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:22:41 PM</td>
+				<td class='step-details'>
+						Starting Login of alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:23:31 PM</td>
+				<td class='step-details'>
+						Single contact from Avsender Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Single contact from Avsender Filter Failed_1598547211596.png' src='./test-output/screenshots/Single contact from Avsender Filter Failed_1598547211596.png' data-src='./test-output/screenshots/Single contact from Avsender Filter Failed_1598547211596.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:23:31 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:23:31 PM</td>
+				<td class='step-details'>
+						Single contact from Avsender filter failed to filter messages from Single contact
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC007</span>
+						<span class='test-time'>Aug 27, 2020 10:23:32 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:23:32 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:23:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Foresatte icon in contact filter in home and verify messages from Parent contact are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:23:32 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:24:21 PM</td>
+				<td class='step-details'>
+						foresatte contact from contact filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/foresatte contact from contact filter Failed_1598547261488.png' src='./test-output/screenshots/foresatte contact from contact filter Failed_1598547261488.png' data-src='./test-output/screenshots/foresatte contact from contact filter Failed_1598547261488.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:24:21 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:24:21 PM</td>
+				<td class='step-details'>
+						foresatte contact filter from Contact filter failed to filter messages!!
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC010</span>
+						<span class='test-time'>Aug 27, 2020 10:24:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:24:22 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:24:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select single contact icon in contact filter in Arkiv Mottatt </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:24:22 PM</td>
+				<td class='step-details'>
+						Starting Login of 25129394725
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC009</span>
+						<span class='test-time'>Aug 27, 2020 10:25:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:25:10 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:25:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select single contact icon in contact filter in Arkiv Sendt </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:25:10 PM</td>
+				<td class='step-details'>
+						Starting Login of 25129394725
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:25:57 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:25:57 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:25:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Sporsmal filter in Arkiv Sendt folder and verify messages with Sporsmal tag are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:25:57 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:26:46 PM</td>
+				<td class='step-details'>
+						Sporsmal Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Sporsmal Filter Failed_1598547406597.png' src='./test-output/screenshots/Sporsmal Filter Failed_1598547406597.png' data-src='./test-output/screenshots/Sporsmal Filter Failed_1598547406597.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:26:46 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:26:46 PM</td>
+				<td class='step-details'>
+						Sporsmal filter failed to filter messages with Sporsmal tag
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:26:47 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:26:47 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:26:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Sporsmal filter in Arkiv Mottatt folder and verify messages with Sporsmal tag are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:26:47 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:27:37 PM</td>
+				<td class='step-details'>
+						Sporsmal Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Sporsmal Filter Failed_1598547457228.png' src='./test-output/screenshots/Sporsmal Filter Failed_1598547457228.png' data-src='./test-output/screenshots/Sporsmal Filter Failed_1598547457228.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:27:37 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:27:37 PM</td>
+				<td class='step-details'>
+						Sporsmal filter failed to filter messages with Sporsmal tag
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC009</span>
+						<span class='test-time'>Aug 27, 2020 10:27:38 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:27:38 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:27:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Sporsmal and multiple contacts under Avsender filter in Arkiv Mottatt folder and verify messages with sporsmal tag from selected contacts are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:27:38 PM</td>
+				<td class='step-details'>
+						Starting Login of masya010
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:28:26 PM</td>
+				<td class='step-details'>
+						Sporsmal and Multiple contact from Avsender Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Sporsmal and Multiple contact from Avsender Filter Failed_1598547506709.png' src='./test-output/screenshots/Sporsmal and Multiple contact from Avsender Filter Failed_1598547506709.png' data-src='./test-output/screenshots/Sporsmal and Multiple contact from Avsender Filter Failed_1598547506709.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:28:26 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher Masya010
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:28:26 PM</td>
+				<td class='step-details'>
+						Sporsmal and Multiple contact from Avsender filter failed to filter messages with sporsmal tag from Multiple contact in Arkiv Mottatt folder
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC008</span>
+						<span class='test-time'>Aug 27, 2020 10:28:28 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:28:28 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:28:28 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Sporsmal and single contact under Avsender filter in Arkiv Mottatt folder and verify messages from single contact is displayed with Sporsmal tag </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:28:28 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:29:15 PM</td>
+				<td class='step-details'>
+						Sporsmal and Single contact from Avsender Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Sporsmal and Single contact from Avsender Filter Failed_1598547555875.png' src='./test-output/screenshots/Sporsmal and Single contact from Avsender Filter Failed_1598547555875.png' data-src='./test-output/screenshots/Sporsmal and Single contact from Avsender Filter Failed_1598547555875.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:29:15 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:29:15 PM</td>
+				<td class='step-details'>
+						Sporsmal and Single contact from Avsender filter failed to filter messages with sporsmal tag from Single contact in Arkiv Mottatt folder
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:29:17 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:29:17 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:29:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Sporsmal filter in home and verify messages with Sporsmal tag are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:29:17 PM</td>
+				<td class='step-details'>
+						Starting Login of alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:30:05 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Uleste Meldinger Filter Failed_1598547605551.png' src='./test-output/screenshots/Uleste Meldinger Filter Failed_1598547605551.png' data-src='./test-output/screenshots/Uleste Meldinger Filter Failed_1598547605551.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:30:05 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:30:05 PM</td>
+				<td class='step-details'>
+						Sporsmal filter failed to filter messages with Sporsmal tag
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Home_TC006</span>
+						<span class='test-time'>Aug 27, 2020 10:30:06 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:30:06 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:30:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Elev icon in contact filter in home and verify messages from Student contact are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:30:06 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:30:54 PM</td>
+				<td class='step-details'>
+						student contact from contact filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/student contact from contact filter Failed_1598547654432.png' src='./test-output/screenshots/student contact from contact filter Failed_1598547654432.png' data-src='./test-output/screenshots/student contact from contact filter Failed_1598547654432.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:30:54 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:30:54 PM</td>
+				<td class='step-details'>
+						Student contact filter from Contact filter failed to filter messages!!
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC007</span>
+						<span class='test-time'>Aug 27, 2020 10:30:55 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:30:55 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:30:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Uleste Meldinger and multiple contacts under Avsender filter in Arkiv Mottatt folder and verify unread messages from selected contacts are displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:30:55 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:31:44 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger and Multiple contact from Avsender Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Uleste Meldinger and Multiple contact from Avsender Filter Failed_1598547704345.png' src='./test-output/screenshots/Uleste Meldinger and Multiple contact from Avsender Filter Failed_1598547704345.png' data-src='./test-output/screenshots/Uleste Meldinger and Multiple contact from Avsender Filter Failed_1598547704345.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:31:44 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:31:44 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger and Multiple contact from Avsender filter failed to filter unread messages from Multiple contact in Arkiv Mottatt folder
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Fiter_Arkiv_TC006</span>
+						<span class='test-time'>Aug 27, 2020 10:31:45 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:31:45 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:31:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Select Uleste Meldinger and single contact under Avsender filter in Arkiv Mottatt folder and verify unread messages from single contact is displayed </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:31:45 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:32:32 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger and Single contact from Avsender Filter Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Uleste Meldinger and Single contact from Avsender Filter Failed_1598547752888.png' src='./test-output/screenshots/Uleste Meldinger and Single contact from Avsender Filter Failed_1598547752888.png' data-src='./test-output/screenshots/Uleste Meldinger and Single contact from Avsender Filter Failed_1598547752888.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:32:32 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:32:32 PM</td>
+				<td class='step-details'>
+						Uleste Meldinger and Single contact from Avsender filter failed to filter unread messages from Multiple contact in Arkiv Mottatt folder
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Contacts_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:32:34 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:32:34 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:32:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Add, Remove and again add contact from Till field in meldinger </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:32:34 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:33:20 PM</td>
+				<td class='step-details'>
+						Contact Removal Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Contact Removal Failed_1598547800747.png' src='./test-output/screenshots/Contact Removal Failed_1598547800747.png' data-src='./test-output/screenshots/Contact Removal Failed_1598547800747.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:33:20 PM</td>
+				<td class='step-details'>
+						Add, Remove and Again add contact from Til field in meldinger Test Case Passed
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:33:20 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Contacts_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:33:22 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:33:22 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:33:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Add and Remove contact from Til field in meldinger </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:33:22 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:34:10 PM</td>
+				<td class='step-details'>
+						Contact Removal Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Contact Removal Failed_1598547850467.png' src='./test-output/screenshots/Contact Removal Failed_1598547850467.png' data-src='./test-output/screenshots/Contact Removal Failed_1598547850467.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:34:10 PM</td>
+				<td class='step-details'>
+						Add and Remove contact from Til field in meldinger Test Case Failed
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:34:10 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Login_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:34:11 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:34:11 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:34:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Se etter hjelpesidevisning på påloggingsskjermbildet </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:34:11 PM</td>
+				<td class='step-details'>
+						Lansering av Elev-app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:34:51 PM</td>
+				<td class='step-details'>
+						Elev-appen ble lansert vellykket
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:34:55 PM</td>
+				<td class='step-details'>
+						Help page display failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Help page display failed_1598547895809.png' src='./test-output/screenshots/Help page display failed_1598547895809.png' data-src='./test-output/screenshots/Help page display failed_1598547895809.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:34:55 PM</td>
+				<td class='step-details'>
+						Kontroller om hjelpesidevisningen er vist i Logg inn-skjermens testsak Mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:34:55 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Klikk på Hjelp-ikonet
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Login_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:34:55 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:34:55 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:34:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Merk av for å få tilgang til alternativet "Glemt brukernavn og passord", og se etter skjermbildet for den tapte kontoen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:34:55 PM</td>
+				<td class='step-details'>
+						Lansering av Elev-app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:35:37 PM</td>
+				<td class='step-details'>
+						Elev-appen ble lansert vellykket
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:35:48 PM</td>
+				<td class='step-details'>
+						Lost Account page display failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Lost Account page display failed_1598547948652.png' src='./test-output/screenshots/Lost Account page display failed_1598547948652.png' data-src='./test-output/screenshots/Lost Account page display failed_1598547948652.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:35:48 PM</td>
+				<td class='step-details'>
+						Kontroller at du får tilgang til \ "Trenger du hjelp? \" -Siden, og sjekk om støttesiden for testvisningssiden mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:35:48 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Klikk på alternativet Glemt brukernavn og passord
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Login_TC004</span>
+						<span class='test-time'>Aug 27, 2020 10:35:50 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:35:50 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:35:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Sjekk tilgangen til "Personvern og informasjon om informasjonskapsler" og se etter "Personverg og informasjonssikkerhet" -siden </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:35:50 PM</td>
+				<td class='step-details'>
+						Lansering av Elev-app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:36:29 PM</td>
+				<td class='step-details'>
+						Elev-appen ble lansert vellykket
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:36:40 PM</td>
+				<td class='step-details'>
+						Lost Account page display failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Lost Account page display failed_1598548000815.png' src='./test-output/screenshots/Lost Account page display failed_1598548000815.png' data-src='./test-output/screenshots/Lost Account page display failed_1598548000815.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:36:40 PM</td>
+				<td class='step-details'>
+						Den tsjekkiske tilgangen til "Personvern og informasjon om informasjon " og se etter "Personverg og informasjonssikkerhet " -siden testsak mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:36:40 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Klikk på koblingen Personvern og informasjonskapsel
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Login_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:36:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:36:41 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:36:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Sjekk tilgang "Trenger du hjelp?" og sjekk om støttesiden vises </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:36:41 PM</td>
+				<td class='step-details'>
+						Lansering av Elev-app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:37:23 PM</td>
+				<td class='step-details'>
+						Elev-appen ble lansert vellykket
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:37:34 PM</td>
+				<td class='step-details'>
+						Support page display failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Support page display failed_1598548054141.png' src='./test-output/screenshots/Support page display failed_1598548054141.png' data-src='./test-output/screenshots/Support page display failed_1598548054141.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:37:34 PM</td>
+				<td class='step-details'>
+						Kontroller at du får tilgang til \ "Trenger du hjelp? \" -Siden, og sjekk om støttesiden for testvisningssiden mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:37:34 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Ved å klikke på trenger du hjelpealternativ
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Login_TC007</span>
+						<span class='test-time'>Aug 27, 2020 10:37:35 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:37:35 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:37:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Deaktiver alternativet "Bruk Biometrisk" under innstillinger og bekreft at biometrisk oppsett IKKE vises i PIN-skjermen i Elev-appen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:37:35 PM</td>
+				<td class='step-details'>
+						Starter pålogging av alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:38:22 PM</td>
+				<td class='step-details'>
+						Logg inn page display failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Logg inn page display failed_1598548102885.png' src='./test-output/screenshots/Logg inn page display failed_1598548102885.png' data-src='./test-output/screenshots/Logg inn page display failed_1598548102885.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:38:22 PM</td>
+				<td class='step-details'>
+						Deaktiver alternativet "Bruk Biometrisk" under innstillinger og bekreft at biometrisk oppsett IKKE vises i PIN-skjermen i Elev App-testtilfelle mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:38:22 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logger på som Student
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Login_TC005</span>
+						<span class='test-time'>Aug 27, 2020 10:38:24 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:38:24 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:38:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Kontroller påloggingsskjermen som vises når 'Glemt pin-code?' er tilgjengelig </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:38:24 PM</td>
+				<td class='step-details'>
+						Starter pålogging av alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:39:13 PM</td>
+				<td class='step-details'>
+						Logg inn page display failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Logg inn page display failed_1598548153272.png' src='./test-output/screenshots/Logg inn page display failed_1598548153272.png' data-src='./test-output/screenshots/Logg inn page display failed_1598548153272.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:39:13 PM</td>
+				<td class='step-details'>
+						Kontroller påloggingsskjermen som vises når 'Glemt pin-code?' testesaken mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:39:13 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logger på som Student
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Login_TC008</span>
+						<span class='test-time'>Aug 27, 2020 10:39:14 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:39:14 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:39:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Klikk på Logg inn når nettverket ikke er tilgjengelig, og sjekk for feilvisning </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:39:14 PM</td>
+				<td class='step-details'>
+						Lansering av Elev-app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:39:53 PM</td>
+				<td class='step-details'>
+						Elev-appen ble lansert vellykket
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:39:57 PM</td>
+				<td class='step-details'>
+						WiFi-tilkobling satt til AV
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:39:58 PM</td>
+				<td class='step-details'>
+						Lansering av Elev-app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:40:35 PM</td>
+				<td class='step-details'>
+						Elev-appen ble lansert vellykket
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:41:28 PM</td>
+				<td class='step-details'>
+						Logg inn page display failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Logg inn page display failed_1598548288560.png' src='./test-output/screenshots/Logg inn page display failed_1598548288560.png' data-src='./test-output/screenshots/Logg inn page display failed_1598548288560.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:41:28 PM</td>
+				<td class='step-details'>
+						Klikk på Logg inn på nettet når det ikke er tilgjengelig, og sjekk for feilvisning av test saken mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:41:28 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Klikk på Logg Inn-knappen
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:41:29 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:41:29 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:41:29 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sends message to Student with the option Svar av </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:41:29 PM</td>
+				<td class='step-details'>
+						Teacher One School Login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:42:18 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598548338883.png' src='./test-output/screenshots/sent_email_01_1598548338883.png' data-src='./test-output/screenshots/sent_email_01_1598548338883.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:42:18 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:42:18 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:42:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:42:18 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:42:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send new message to Teacher with the option Spørsmål </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:43:08 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email-03_1598548388458.png' src='./test-output/screenshots/sent_email-03_1598548388458.png' data-src='./test-output/screenshots/sent_email-03_1598548388458.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:43:08 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:43:08 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Teacher login in Elav App with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC004</span>
+						<span class='test-time'>Aug 27, 2020 10:43:08 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:43:08 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:43:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sends new SMS melding/SMS message to Student </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:43:56 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email-04_1598548436441.png' src='./test-output/screenshots/sent_email-04_1598548436441.png' data-src='./test-output/screenshots/sent_email-04_1598548436441.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:43:56 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:43:56 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Teacher login in Elav App with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC006</span>
+						<span class='test-time'>Aug 27, 2020 10:43:56 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:43:56 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:43:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Student som sender en ny melding til læreren </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:44:45 PM</td>
+				<td class='step-details'>
+						Bekreftelsen mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/screenshot_06_1598548485904.png' src='./test-output/screenshots/screenshot_06_1598548485904.png' data-src='./test-output/screenshots/screenshot_06_1598548485904.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:44:45 PM</td>
+				<td class='step-details'>
+						test saken mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:44:45 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes Logg inn som Student i Elav App med TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC007</span>
+						<span class='test-time'>Aug 27, 2020 10:44:45 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:44:45 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:44:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Foresatte sender en ny melding til læreren </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:45:32 PM</td>
+				<td class='step-details'>
+						Bekreftelsen mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/parent_send_msg_teacher_07_1598548532069.png' src='./test-output/screenshots/parent_send_msg_teacher_07_1598548532069.png' data-src='./test-output/screenshots/parent_send_msg_teacher_07_1598548532069.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:45:32 PM</td>
+				<td class='step-details'>
+						Feil - Bekreftelsen mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:45:32 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Parent login into the App med TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='42'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1986_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:45:33 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:45:33 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:45:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-desc'>Foresatte sender ny melding til læreren fra Foresatte-appen - En skole </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:46:20 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/parent_to_teacher_1598548580675.png' src='./test-output/screenshots/parent_to_teacher_1598548580675.png' data-src='./test-output/screenshots/parent_to_teacher_1598548580675.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:46:20 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:46:20 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logger som Foresatte med TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1986_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:46:22 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:46:22 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:46:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Eleven sender en ny melding til læreren - en skole </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:46:22 PM</td>
+				<td class='step-details'>
+						Logger deg som Elev til Eleven-app
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:47:10 PM</td>
+				<td class='step-details'>
+						test saken mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/screenshot_tc6_1598548630913.png' src='./test-output/screenshots/screenshot_tc6_1598548630913.png' data-src='./test-output/screenshots/screenshot_tc6_1598548630913.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:47:10 PM</td>
+				<td class='step-details'>
+						test saken mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:47:10 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logger deg som Elev til Eleven-app med TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1986_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:47:12 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:47:12 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:47:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Lærer sender en ny melding til Elev - en skole </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:47:12 PM</td>
+				<td class='step-details'>
+						Lærerpålogging behandles i Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='error'>
+				<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+				<td class='timestamp'>10:47:58 PM</td>
+				<td class='step-details'>
+						Logg inn som Lærer i Elav app
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:47:59 PM</td>
+				<td class='step-details'>
+						Bekreftelsen mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/received_email_1598548679800.png' src='./test-output/screenshots/received_email_1598548679800.png' data-src='./test-output/screenshots/received_email_1598548679800.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:47:59 PM</td>
+				<td class='step-details'>
+						Bekreftelsen mislyktes
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:47:59 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logg inn som Lærer i Elav app med TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='45'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1987_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:48:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:48:00 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:48:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Parent sends an absence message to the Teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:48:00 PM</td>
+				<td class='step-details'>
+						Starting Login of Parent(25129394725)
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='46'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1987_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:48:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:48:47 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:48:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Parent sends an absence message to the Teacher with later date and time </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:48:47 PM</td>
+				<td class='step-details'>
+						Starting Login of Parent(25129394725)
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='47'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1987_TC004</span>
+						<span class='test-time'>Aug 27, 2020 10:49:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:49:32 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:49:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Parent sends an absence message to the Teacher with previous date and time </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:49:32 PM</td>
+				<td class='step-details'>
+						Starting Login of Parent(25129394725)
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='48'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1987_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:50:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:50:18 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:50:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Parent sends an absence message to the Teacher as Tomorrow </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:50:18 PM</td>
+				<td class='step-details'>
+						Starting Login of Parent(25129394725)
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='49'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1989_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:51:04 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:51:04 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:51:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Logg inn verification as a Student </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:51:04 PM</td>
+				<td class='step-details'>
+						Starting Login of alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:51:52 PM</td>
+				<td class='step-details'>
+						Student Login Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Student Login Failed_1598548912156.png' src='./test-output/screenshots/Student Login Failed_1598548912156.png' data-src='./test-output/screenshots/Student Login Failed_1598548912156.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:51:52 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Student with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='50'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1989_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:51:53 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:51:53 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:51:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Logg inn verification as a Teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:51:53 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:52:40 PM</td>
+				<td class='step-details'>
+						Teacher Login Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Teacher Login Failed_1598548960388.png' src='./test-output/screenshots/Teacher Login Failed_1598548960388.png' data-src='./test-output/screenshots/Teacher Login Failed_1598548960388.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:52:40 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='51'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1989_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:52:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:52:41 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:52:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Logg inn verification as Parent </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:52:41 PM</td>
+				<td class='step-details'>
+						Starting Login of Parent(25129394725)
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:53:29 PM</td>
+				<td class='step-details'>
+						Parent Login Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Parent Login Failed_1598549009441.png' src='./test-output/screenshots/Parent Login Failed_1598549009441.png' data-src='./test-output/screenshots/Parent Login Failed_1598549009441.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:53:29 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Parent with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='52'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1990_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:53:30 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:53:30 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:53:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send Reply from Teacher to Student </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:54:19 PM</td>
+				<td class='step-details'>
+						Test Execution Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/reply_from_teacher_to_student_1598549059490.png' src='./test-output/screenshots/reply_from_teacher_to_student_1598549059490.png' data-src='./test-output/screenshots/reply_from_teacher_to_student_1598549059490.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:54:19 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Elev App Login with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='53'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1990_TC002</span>
+						<span class='test-time'>Aug 27, 2020 10:54:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:54:20 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:54:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send Reply from Student to Teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:55:08 PM</td>
+				<td class='step-details'>
+						Verification Completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/reply_from_student_to_teacher_1598549108815.png' src='./test-output/screenshots/reply_from_student_to_teacher_1598549108815.png' data-src='./test-output/screenshots/reply_from_student_to_teacher_1598549108815.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:55:08 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Elev App Login with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='54'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1990_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:55:10 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:55:10 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:55:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send Reply to Teacher from Parent </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:55:57 PM</td>
+				<td class='step-details'>
+						Verification Completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/reply_from_parent_to_teacher_1598549157629.png' src='./test-output/screenshots/reply_from_parent_to_teacher_1598549157629.png' data-src='./test-output/screenshots/reply_from_parent_to_teacher_1598549157629.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:55:57 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Elev App Login with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='55'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_OnlyEleven_TC007</span>
+						<span class='test-time'>Aug 27, 2020 10:55:58 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:55:58 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:55:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send a message from Teacher to the Student with Only Eleven option </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:55:58 PM</td>
+				<td class='step-details'>
+						Teacher One School Login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:56:45 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549205857.png' src='./test-output/screenshots/sent_email_01_1598549205857.png' data-src='./test-output/screenshots/sent_email_01_1598549205857.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:56:45 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:56:45 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='56'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_OnlyForesatte_TC008</span>
+						<span class='test-time'>Aug 27, 2020 10:56:45 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:56:45 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:56:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send a message from Teacher to the Student with Only Foresatte option </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:56:45 PM</td>
+				<td class='step-details'>
+						Teacher One School Login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:57:32 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549252814.png' src='./test-output/screenshots/sent_email_01_1598549252814.png' data-src='./test-output/screenshots/sent_email_01_1598549252814.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:57:32 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:57:32 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='57'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendReceive_SendAttachment_TC001</span>
+						<span class='test-time'>Aug 27, 2020 10:57:33 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:57:33 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:57:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher send a message to the Student with an attachment(Vedlegg) </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>10:57:33 PM</td>
+				<td class='step-details'>
+						Teacher login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:58:19 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549299532.png' src='./test-output/screenshots/sent_email_01_1598549299532.png' data-src='./test-output/screenshots/sent_email_01_1598549299532.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:58:19 PM</td>
+				<td class='step-details'>
+						Test case failed atLogging in as Teacher to Elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:58:19 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='58'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_Sporsmal_Reply_JA_TC006</span>
+						<span class='test-time'>Aug 27, 2020 10:58:19 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:58:19 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:58:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send new message from Teacher to the Student with the Spørsmål enabled and Student responds as JA then check the response received by teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:59:05 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email-03_1598549345775.png' src='./test-output/screenshots/sent_email-03_1598549345775.png' data-src='./test-output/screenshots/sent_email-03_1598549345775.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:59:05 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:59:05 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Teacher login in Elav App with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='59'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_Sporsmal_Reply_NEI_TC005</span>
+						<span class='test-time'>Aug 27, 2020 10:59:05 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:59:05 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:59:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send new message from Teacher to the Student with the Spørsmål enabled and Student responds as NEI then check the response received by teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:59:53 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email-03_1598549393200.png' src='./test-output/screenshots/sent_email-03_1598549393200.png' data-src='./test-output/screenshots/sent_email-03_1598549393200.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:59:53 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>10:59:53 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Teacher login in Elav App with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='60'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_Svar_Av_Sporsmal_TC003</span>
+						<span class='test-time'>Aug 27, 2020 10:59:53 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 10:59:53 PM</span>
+	<span class='label end-time'>Aug 27, 2020 10:59:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send new message from Teacher to the Student with the Spørsmål enabled and Svar av optioned is enabled </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:00:39 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email-03_1598549439521.png' src='./test-output/screenshots/sent_email-03_1598549439521.png' data-src='./test-output/screenshots/sent_email-03_1598549439521.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:00:39 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:00:39 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Teacher login in Elav App with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='61'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_Svar_Pa_Sporsmal_TC004</span>
+						<span class='test-time'>Aug 27, 2020 11:00:39 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:00:39 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:00:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send new message from Teacher to the Student with the Spørsmål enabled and Svar pa optioned is enabled </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:01:26 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email-03_1598549486130.png' src='./test-output/screenshots/sent_email-03_1598549486130.png' data-src='./test-output/screenshots/sent_email-03_1598549486130.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:01:26 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:01:26 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Teacher login in Elav App with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='62'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_SvarPa_TC002</span>
+						<span class='test-time'>Aug 27, 2020 11:01:26 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:01:26 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:01:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sends a message to the Student with the option Svar pa </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:01:26 PM</td>
+				<td class='step-details'>
+						Teacher One School Login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:02:13 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549532997.png' src='./test-output/screenshots/sent_email_01_1598549532997.png' data-src='./test-output/screenshots/sent_email_01_1598549532997.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:02:13 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:02:13 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='63'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_TwoStudents_TC009</span>
+						<span class='test-time'>Aug 27, 2020 11:02:13 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:02:13 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:02:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send a message from Teacher to multiple Students/Contacts </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:02:13 PM</td>
+				<td class='step-details'>
+						Teacher One School Login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:03:00 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549580425.png' src='./test-output/screenshots/sent_email_01_1598549580425.png' data-src='./test-output/screenshots/sent_email_01_1598549580425.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:03:00 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull and Test Case Failed
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:03:00 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='64'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendMsg_TwoTeacher_TC001</span>
+						<span class='test-time'>Aug 27, 2020 11:03:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:03:00 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:03:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send a message from the Teacher to another Teacher and verifying the received message </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:03:00 PM</td>
+				<td class='step-details'>
+						Teacher One School Login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:03:47 PM</td>
+				<td class='step-details'>
+						Test execution failed at
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549627322.png' src='./test-output/screenshots/sent_email_01_1598549627322.png' data-src='./test-output/screenshots/sent_email_01_1598549627322.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:03:47 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='65'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendReceive_SendAttachment_TC001</span>
+						<span class='test-time'>Aug 27, 2020 11:03:47 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:03:47 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:03:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher attach a file then removes from the attachment and selecting the new attachment and sending to the Student </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:03:47 PM</td>
+				<td class='step-details'>
+						Teacher login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:04:34 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549674110.png' src='./test-output/screenshots/sent_email_01_1598549674110.png' data-src='./test-output/screenshots/sent_email_01_1598549674110.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:04:34 PM</td>
+				<td class='step-details'>
+						Test case failed atLogging in as Teacher to Elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:04:34 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='66'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendReceive_Attachment_TC002</span>
+						<span class='test-time'>Aug 27, 2020 11:04:34 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:04:34 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:04:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sending a message to the Student with multiple attachments(>1) </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:04:34 PM</td>
+				<td class='step-details'>
+						Teacher login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:05:22 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549722116.png' src='./test-output/screenshots/sent_email_01_1598549722116.png' data-src='./test-output/screenshots/sent_email_01_1598549722116.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:05:22 PM</td>
+				<td class='step-details'>
+						Test case failed atLogging in as Teacher to Elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:05:22 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='67'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendReceive_Attachment_TC003</span>
+						<span class='test-time'>Aug 27, 2020 11:05:22 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:05:22 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:05:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sending a PDF attachment to the Student with the message and the Student receive the attachment and opening it </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:05:22 PM</td>
+				<td class='step-details'>
+						Teacher login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:06:10 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549770799.png' src='./test-output/screenshots/sent_email_01_1598549770799.png' data-src='./test-output/screenshots/sent_email_01_1598549770799.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:06:10 PM</td>
+				<td class='step-details'>
+						Test case failed atLogging in as Teacher to Elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:06:10 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='68'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_SendReceive_Attachment_TC004</span>
+						<span class='test-time'>Aug 27, 2020 11:06:10 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:06:10 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:06:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sending an image file attachment to the Student with the message and the Student receive the attachment and opening it </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:06:10 PM</td>
+				<td class='step-details'>
+						Teacher login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:07:00 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549820098.png' src='./test-output/screenshots/sent_email_01_1598549820098.png' data-src='./test-output/screenshots/sent_email_01_1598549820098.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:07:00 PM</td>
+				<td class='step-details'>
+						Test case failed atLogging in as Teacher to Elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:07:00 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Teacher to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='69'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_Settings_DisableMsgByEmail_TC002</span>
+						<span class='test-time'>Aug 27, 2020 11:07:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:07:00 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:07:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Receive/Verify message by email option with disable option from the app Innstillinger(Settings) </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:07:00 PM</td>
+				<td class='step-details'>
+						Student login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:07:48 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549868319.png' src='./test-output/screenshots/sent_email_01_1598549868319.png' data-src='./test-output/screenshots/sent_email_01_1598549868319.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:07:48 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:07:48 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Student to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='70'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_Settings_DisableMsgByEmail_TC003</span>
+						<span class='test-time'>Aug 27, 2020 11:07:48 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:07:48 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:07:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Receive/Verify message by email option with Enable option from the app Innstillinger(Settings) </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:07:48 PM</td>
+				<td class='step-details'>
+						Student login process in Elav App Started
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:08:35 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/sent_email_01_1598549915028.png' src='./test-output/screenshots/sent_email_01_1598549915028.png' data-src='./test-output/screenshots/sent_email_01_1598549915028.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:08:35 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:08:35 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Logging in as Student to Elev app with TimeoutException.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='71'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_Profiles_TC001</span>
+						<span class='test-time'>Aug 27, 2020 11:08:35 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:08:35 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:08:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Logg inn som overordnet og bekreft e-postadressen i en profil </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:08:35 PM</td>
+				<td class='step-details'>
+						Starter pålogging av overordnet(25129394725)
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:09:22 PM</td>
+				<td class='step-details'>
+						Verifisering av foreldreprofil mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Parent_Login_Failed_1598549962214.png' src='./test-output/screenshots/Parent_Login_Failed_1598549962214.png' data-src='./test-output/screenshots/Parent_Login_Failed_1598549962214.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:09:22 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logg inn som overordnet.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='72'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_UDEMA_Profiles_TC002</span>
+						<span class='test-time'>Aug 27, 2020 11:09:23 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:09:23 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:09:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Logg inn som Student og bekreft e-postadressen i en profil </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:09:23 PM</td>
+				<td class='step-details'>
+						Starter pålogging av alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:12 PM</td>
+				<td class='step-details'>
+						Verifisering av studentprofil mislyktes
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Student_Login_Failed_1598550012952.png' src='./test-output/screenshots/Student_Login_Failed_1598550012952.png' data-src='./test-output/screenshots/Student_Login_Failed_1598550012952.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:10:12 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mensLogger på som Student.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='73'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_UDEMA_Profiles_TC003</span>
+						<span class='test-time'>Aug 27, 2020 11:10:14 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Aug 27, 2020 11:10:14 PM</span>
+	<span class='label end-time'>Aug 27, 2020 11:10:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Logg inn som lærer og bekreft e-postadressen i profilen </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:10:14 PM</td>
+				<td class='step-details'>
+						Starter pålogging av inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:03 PM</td>
+				<td class='step-details'>
+						Teacher profile verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='./test-output/screenshots/Bekreftelse av lærerprofil mislyktes klLogger på som lærer_1598550063006.png' src='./test-output/screenshots/Bekreftelse av lærerprofil mislyktes klLogger på som lærer_1598550063006.png' data-src='./test-output/screenshots/Bekreftelse av lærerprofil mislyktes klLogger på som lærer_1598550063006.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>11:11:03 PM</td>
+				<td class='step-details'>
+						Test saken mislyktes mens Logger på som lærer.
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>73</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Aug 27, 2020 09:49:15 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Aug 27, 2020 11:11:03 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>1h 21m 47s+148ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host name</td>
+								<td>localhost</td>
+							</tr>
+							<tr>
+								<td>Environment</td>
+								<td>TEST</td>
+							</tr>
+							<tr>
+								<td>Elav App Version</td>
+								<td>1.43.0</td>
+							</tr>
+							<tr>
+								<td>Foresatte App Version</td>
+								<td>1.43.0</td>
+							</tr>
+							<tr>
+								<td>Device</td>
+								<td>Pixel 3(Emulator)</td>
+							</tr>
+							<tr>
+								<td>OS</td>
+								<td>8.1.0</td>
+							</tr>
+							<tr>
+								<td>Automation Run By</td>
+								<td>S, Manjunath</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 73,
+				passParent: 9,
+				failParent: 64,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 64,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "UDEMA_1983_TC003":0,"UDEMA_1983_TC002":0,"UDEMA_1983_TC001":0,"UDEMA_1985_TC003":0,"UDEMA_1985_TC002":0,"UDEMA_1985_TC001":0,"UDEMA_1988_TC003":0,"UDEMA_1988_TC002":0,"UDEMA_1988_TC001":0,"UDEMA_Fiter_Arkiv_TC001":0,"UDEMA_Fiter_Home_TC001":0,"UDEMA_Fiter_Arkiv_TC005":0,"UDEMA_Fiter_Home_TC003":0,"UDEMA_Fiter_Home_TC005":0,"UDEMA_Fiter_Arkiv_TC004":0,"UDEMA_Fiter_Home_TC004":0,"UDEMA_Fiter_Home_TC007":0,"UDEMA_Fiter_Home_TC010":0,"UDEMA_Fiter_Home_TC009":0,"UDEMA_Fiter_Arkiv_TC001":0,"UDEMA_Fiter_Arkiv_TC003":0,"UDEMA_Fiter_Arkiv_TC009":0,"UDEMA_Fiter_Arkiv_TC008":0,"UDEMA_Fiter_Home_TC002":0,"UDEMA_Fiter_Home_TC006":0,"UDEMA_Fiter_Arkiv_TC007":0,"UDEMA_Fiter_Arkiv_TC006":0,"UDEMA_Contacts_TC002":0,"UDEMA_Contacts_TC001":0,"UDEMA_Login_TC001":0,"UDEMA_Login_TC003":0,"UDEMA_Login_TC004":0,"UDEMA_Login_TC002":0,"UDEMA_Login_TC007":0,"UDEMA_Login_TC005":0,"UDEMA_Login_TC008":0,"UDEMA_1984_TC001":0,"UDEMA_1984_TC003":0,"UDEMA_1984_TC004":0,"UDEMA_1984_TC006":0,"UDEMA_1984_TC007":0,"UDEMA_1986_TC001":0.001,"UDEMA_1986_TC002":0,"UDEMA_1986_TC003":0,"UDEMA_1987_TC001":0,"UDEMA_1987_TC003":0,"UDEMA_1987_TC004":0,"UDEMA_1987_TC002":0,"UDEMA_1989_TC001":0,"UDEMA_1989_TC002":0,"UDEMA_1989_TC003":0,"UDEMA_1990_TC001":0,"UDEMA_1990_TC002":0,"UDEMA_1990_TC003":0,"TC_SendMsg_OnlyEleven_TC007":0,"TC_SendMsg_OnlyForesatte_TC008":0,"TC_SendReceive_SendAttachment_TC001":0,"TC_SendMsg_Sporsmal_Reply_JA_TC006":0,"TC_SendMsg_Sporsmal_Reply_NEI_TC005":0,"TC_SendMsg_Svar_Av_Sporsmal_TC003":0,"TC_SendMsg_Svar_Pa_Sporsmal_TC004":0,"TC_SendMsg_SvarPa_TC002":0,"TC_SendMsg_TwoStudents_TC009":0,"TC_SendMsg_TwoTeacher_TC001":0,"TC_SendReceive_SendAttachment_TC001":0,"TC_SendReceive_Attachment_TC002":0,"TC_SendReceive_Attachment_TC003":0,"TC_SendReceive_Attachment_TC004":0,"TC_Settings_DisableMsgByEmail_TC002":0,"TC_Settings_DisableMsgByEmail_TC003":0,"UDEMA_Profiles_TC001":0,"TC_UDEMA_Profiles_TC002":0,"TC_UDEMA_Profiles_TC003":0
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/c23457b/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+			
+      
+        $(document).ready(function() {
+          
+        });
+      
+    
+		</script>
+	</body>
+</html>

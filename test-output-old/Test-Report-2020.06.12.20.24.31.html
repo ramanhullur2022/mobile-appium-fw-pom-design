@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/39026ad/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>UDE Portalen Mobile App</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+      
+        
+      
+    
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Functional</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Jun 12, 2020 08:24:31 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>8</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>8</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC001</span>
+						<span class='test-time'>Jun 12, 2020 08:24:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 08:24:32 PM</span>
+	<span class='label end-time'>Jun 12, 2020 08:24:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sends message to Student with the option Svar av </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:26:27 PM</td>
+				<td class='step-details'>
+						Teacher inlaa014 logged in successfully in elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:26:38 PM</td>
+				<td class='step-details'>
+						Clicked on Ny Melding(new message) to write a message to the Student(alana041)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:26:41 PM</td>
+				<td class='step-details'>
+						Clicked on Till(to) button to select the receipent student name from contact list
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:26:44 PM</td>
+				<td class='step-details'>
+						Clicked on Velg Skole(select school) drop down and schools list displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:26:46 PM</td>
+				<td class='step-details'>
+						Clicked on CGI testgrunnskole from schools drop down options
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:26:50 PM</td>
+				<td class='step-details'>
+						Clicked on Personer tab
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:27:07 PM</td>
+				<td class='step-details'>
+						Searched student alana041 in search box
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:27:31 PM</td>
+				<td class='step-details'>
+						Clicked on student alana041 and selected Eleven + Foresatte checkbox
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:27:44 PM</td>
+				<td class='step-details'>
+						Clicked on Emne and entered message title and message body text then clicked on Send button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:28:21 PM</td>
+				<td class='step-details'>
+						Clicked on Arkiv(archives), Search for sent message in Sendt folder and opening sent message is successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:28:21 PM</td>
+				<td class='step-details'>
+						Teacher inlaa014 sent message successfully to student
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:28:37 PM</td>
+				<td class='step-details'>
+						Logged out from Teacher(inlaa014) successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:28:44 PM</td>
+				<td class='step-details'>
+						Logging in to Student(alana041) to verify email from Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:30:22 PM</td>
+				<td class='step-details'>
+						Login as Student(alana041) to verify email from Teacher(inlaa014) is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:30:22 PM</td>
+				<td class='step-details'>
+						Searching for received mail from Teacher(inlaa014)in Arkiv Received folder
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:30:56 PM</td>
+				<td class='step-details'>
+						Student(alana041) Successfully received email from Teacher(inlaa014)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:04 PM</td>
+				<td class='step-details'>
+						Email matching with the mail sent by Teacher(inlaa014)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:13 PM</td>
+				<td class='step-details'>
+						Logged out from Student(alana041)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:19 PM</td>
+				<td class='step-details'>
+						Verification Completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:31:19 PM</td>
+				<td class='step-details'>
+						Verification Completed and test case result is PASS
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC003</span>
+						<span class='test-time'>Jun 12, 2020 08:31:22 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 08:31:22 PM</span>
+	<span class='label end-time'>Jun 12, 2020 08:31:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send new message to Teacher with the option Spørsmål </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:32:59 PM</td>
+				<td class='step-details'>
+						Teacher inlaa014 logged in successfully in elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:02 PM</td>
+				<td class='step-details'>
+						Spørsmål option selected
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/question.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/question.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/question.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:10 PM</td>
+				<td class='step-details'>
+						Clicked on Ny Melding(new message) to write a message to the Student(alana041)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:12 PM</td>
+				<td class='step-details'>
+						Spørsmål option selected
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/svar_pa.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/svar_pa.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/svar_pa.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:24 PM</td>
+				<td class='step-details'>
+						Clicked on Sporsmal edit box and Entered the question
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:33 PM</td>
+				<td class='step-details'>
+						Clicked OK button after entering Sporsmal message
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:40 PM</td>
+				<td class='step-details'>
+						Clicked on Till(to) button to select the receipent student name from contact list
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:44 PM</td>
+				<td class='step-details'>
+						Clicked on Velg Skole(select school) drop down and schools list displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:48 PM</td>
+				<td class='step-details'>
+						Clicked on CGI testgrunnskole from schools drop down options
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:33:53 PM</td>
+				<td class='step-details'>
+						Clicked on Personer tab
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:34:10 PM</td>
+				<td class='step-details'>
+						Searched student alana041 in search box
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:34:35 PM</td>
+				<td class='step-details'>
+						Clicked on student alana041 and selected Eleven + Foresatte checkbox
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:34:48 PM</td>
+				<td class='step-details'>
+						Clicked on Emne and entered message title and message body text then clicked on Send button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:35:25 PM</td>
+				<td class='step-details'>
+						Clicked on Arkiv(archives), Search for sent message in Sendt folder and opening sent message is successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:35:25 PM</td>
+				<td class='step-details'>
+						Teacher inlaa014 sent message successfully to student
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:35:44 PM</td>
+				<td class='step-details'>
+						Logged out from Teacher(inlaa014) successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:35:49 PM</td>
+				<td class='step-details'>
+						Logging in to Student(alana041) to verify email from Teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:37:27 PM</td>
+				<td class='step-details'>
+						Login as Student(alana041) to verify email from Teacher(inlaa014) is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:37:27 PM</td>
+				<td class='step-details'>
+						Searching for received mail from Teacher(inlaa014)in Arkiv Received folder
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:37:57 PM</td>
+				<td class='step-details'>
+						Student(alana041) Successfully received email from Teacher(inlaa014)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:38:08 PM</td>
+				<td class='step-details'>
+						Sporsmal Email matching with the mail sent by Teacher(inlaa014)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:38:20 PM</td>
+				<td class='step-details'>
+						Logged out from Student(alana041)
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:38:25 PM</td>
+				<td class='step-details'>
+						Verification failed here!
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email-tc3.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email-tc3.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email-tc3.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:38:25 PM</td>
+				<td class='step-details'>
+						Actual Result: From inla
+Expected Result: inlaa014 msg_title2020/06/12 20:32
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:38:25 PM</td>
+				<td class='step-details'>
+						Verfication Completed - FAIL
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC004</span>
+						<span class='test-time'>Jun 12, 2020 08:38:27 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 08:38:27 PM</span>
+	<span class='label end-time'>Jun 12, 2020 08:38:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sends new SMS melding/SMS message to Student </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:03 PM</td>
+				<td class='step-details'>
+						Elev App Login completed successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:11 PM</td>
+				<td class='step-details'>
+						Message compose button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:16 PM</td>
+				<td class='step-details'>
+						Clicked on Valg
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:21 PM</td>
+				<td class='step-details'>
+						Clicked on SMS melding
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:23 PM</td>
+				<td class='step-details'>
+						SMS-melding option selected
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/SMS-Melding.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/SMS-Melding.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/SMS-Melding.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:28 PM</td>
+				<td class='step-details'>
+						Till Button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:32 PM</td>
+				<td class='step-details'>
+						Layout option clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:35 PM</td>
+				<td class='step-details'>
+						School Drop Down Option clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:40:40 PM</td>
+				<td class='step-details'>
+						Personer Tab clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:41:21 PM</td>
+				<td class='step-details'>
+						Clicked on Searched Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:41:28 PM</td>
+				<td class='step-details'>
+						Message title and body content edited then clicked on Send button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:42:13 PM</td>
+				<td class='step-details'>
+						Message sent and clicked on Arkiv-sent, clicked on sent mail mail
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:42:21 PM</td>
+				<td class='step-details'>
+						Logged out successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:45:11 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email-04.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email-04.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/received_email-04.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:45:11 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='error'>
+				<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+				<td class='timestamp'>8:45:11 PM</td>
+				<td class='step-details'>
+						Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //android.widget.TextView[@text='OK']' (tried for 80 second(s) with 500 milliseconds interval)
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC005</span>
+						<span class='test-time'>Jun 12, 2020 08:45:13 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 08:45:13 PM</span>
+	<span class='label end-time'>Jun 12, 2020 08:45:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sends new message with SMS-varsel to Student </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:46:48 PM</td>
+				<td class='step-details'>
+						Elev App Login completed successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:46:56 PM</td>
+				<td class='step-details'>
+						Message compose button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:47:00 PM</td>
+				<td class='step-details'>
+						Clicked on Valg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:47:03 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sms-varsel_05.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sms-varsel_05.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sms-varsel_05.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:47:03 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='error'>
+				<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+				<td class='timestamp'>8:47:03 PM</td>
+				<td class='step-details'>
+						An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c8e:9407:8b33:f291%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.cgi.oslomelding.MainAct..., appPackage: com.cgi.oslomelding, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.cgi.oslomelding.MainAct..., appPackage: com.cgi.oslomelding, autoGrantPermissions: true, deviceName: Pixel_3, newCommandTimeout: 60000, platformName: android, platformVersion: 8.1.0, resetKeyboard: true, unicodeKeyboard: true}, deviceApiLevel: 27, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60000, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 8.1.0, resetKeyboard: true, statBarHeight: 66, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: e4532234-d337-4a33-8446-832733fa678e
+*** Element info: {Using=xpath, value=//android.view.ViewGroup[@content-desc='SMS-varsel']}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:48:56 PM</td>
+				<td class='step-details'>
+						Elev App Logged inn as Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:49:25 PM</td>
+				<td class='step-details'>
+						Clicked on Arkiv then clicked received email by searching it from Arkiv
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:49:33 PM</td>
+				<td class='step-details'>
+						Logged out successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:49:41 PM</td>
+				<td class='step-details'>
+						Verification failed here!
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sms-varsel.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sms-varsel.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sms-varsel.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:49:41 PM</td>
+				<td class='step-details'>
+						Actual Result: null
+Expected Result: SMS-melding
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:49:41 PM</td>
+				<td class='step-details'>
+						Verfication Completed - FAIL
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC006</span>
+						<span class='test-time'>Jun 12, 2020 08:49:46 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 08:49:46 PM</span>
+	<span class='label end-time'>Jun 12, 2020 08:49:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Student send new message to the Teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:51:27 PM</td>
+				<td class='step-details'>
+						Elev App Login as Teacher is completed successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:51:50 PM</td>
+				<td class='step-details'>
+						Message compose button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:51:54 PM</td>
+				<td class='step-details'>
+						Till Button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:51:57 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_06.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_06.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_06.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:51:57 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='error'>
+				<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+				<td class='timestamp'>8:51:57 PM</td>
+				<td class='step-details'>
+						An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c8e:9407:8b33:f291%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.3', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.cgi.oslomelding.MainAct..., appPackage: com.cgi.oslomelding, autoGrantPermissions: true, databaseEnabled: false, desired: {appActivity: com.cgi.oslomelding.MainAct..., appPackage: com.cgi.oslomelding, autoGrantPermissions: true, deviceName: Pixel_3, newCommandTimeout: 60000, platformName: android, platformVersion: 8.1.0, resetKeyboard: true, unicodeKeyboard: true}, deviceApiLevel: 27, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenDensity: 440, deviceScreenSize: 1080x2160, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60000, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 8.1.0, resetKeyboard: true, statBarHeight: 66, takesScreenshot: true, unicodeKeyboard: true, viewportRect: {height: 1962, left: 0, top: 66, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 61b45967-619c-4509-97e5-028b1d9f0c88
+*** Element info: {Using=xpath, value=//android.view.ViewGroup[@content-desc='show-school-dropdown']}
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:54:06 PM</td>
+				<td class='step-details'>
+						Elev App Logged inn as Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:54:38 PM</td>
+				<td class='step-details'>
+						Clicked on Arkiv then clicked received email by searching it from Arkiv
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:55:16 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_tc6.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_tc6.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_tc6.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>8:55:16 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+			<tr class='log' status='error'>
+				<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+				<td class='timestamp'>8:55:16 PM</td>
+				<td class='step-details'>
+						Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //android.view.ViewGroup[@content-desc='Lukket']' (tried for 30 second(s) with 500 milliseconds interval)
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1984_TC007</span>
+						<span class='test-time'>Jun 12, 2020 08:55:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 08:55:21 PM</span>
+	<span class='label end-time'>Jun 12, 2020 08:55:21 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Parent sends new message to the teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:56:54 PM</td>
+				<td class='step-details'>
+						Foresatte App Login completed successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:56:57 PM</td>
+				<td class='step-details'>
+						Parent App - Foresatte login completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parentapp-foresatte.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parentapp-foresatte.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parentapp-foresatte.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:57:05 PM</td>
+				<td class='step-details'>
+						Message compose button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:57:08 PM</td>
+				<td class='step-details'>
+						Till Button clicked
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1986_TC001</span>
+						<span class='test-time'>Jun 12, 2020 08:57:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 08:57:11 PM</span>
+	<span class='label end-time'>Jun 12, 2020 08:57:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Parent sends new message to the Teacher from Parent app - One school </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:59:02 PM</td>
+				<td class='step-details'>
+						Foresatte App Login completed successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:59:05 PM</td>
+				<td class='step-details'>
+						Parent App - Foresatte login completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_app_login_succecc.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_app_login_succecc.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_app_login_succecc.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:59:13 PM</td>
+				<td class='step-details'>
+						Message compose button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:59:16 PM</td>
+				<td class='step-details'>
+						Till Button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:59:36 PM</td>
+				<td class='step-details'>
+						Msg sent from Parent to Teacher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_teacher_selection.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_teacher_selection.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_teacher_selection.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:59:50 PM</td>
+				<td class='step-details'>
+						Message title and body content edited then clicked on Send button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:00:29 PM</td>
+				<td class='step-details'>
+						Message sent and clicked on Arkiv-sent, clicked on sent mail mail
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:00:32 PM</td>
+				<td class='step-details'>
+						Msg sent from Parent to Teacher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_teacher.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_teacher.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parent_teacher.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1986_TC002</span>
+						<span class='test-time'>Jun 12, 2020 09:00:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:00:41 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:00:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-desc'>Student send a new message to the Teacher - One School </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='error'>
+				<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+				<td class='timestamp'>9:01:54 PM</td>
+				<td class='step-details'>
+						Loggin as Student to Elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:01:55 PM</td>
+				<td class='step-details'>
+						Verification failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_tc6.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_tc6.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/screenshot_tc6.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:01:55 PM</td>
+				<td class='step-details'>
+						Verfication unsuccessfull - FAILED
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1986_TC003</span>
+						<span class='test-time'>Jun 12, 2020 09:01:57 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:01:57 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:01:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Teacher sends new message to the Student - One School </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:03:38 PM</td>
+				<td class='step-details'>
+						Elev App Login as Teacher completed successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:03:44 PM</td>
+				<td class='step-details'>
+						Teacher selected from Kotakt
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/teacher_login_with_oneschool.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/teacher_login_with_oneschool.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/teacher_login_with_oneschool.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:03:53 PM</td>
+				<td class='step-details'>
+						Message compose button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:03:57 PM</td>
+				<td class='step-details'>
+						Till Button clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:04:04 PM</td>
+				<td class='step-details'>
+						Personer Tab clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:04:47 PM</td>
+				<td class='step-details'>
+						Clicked on Searched Student
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:04:50 PM</td>
+				<td class='step-details'>
+						Teacher selected from Kotakt
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/student_contact_selected.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/student_contact_selected.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/student_contact_selected.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:05:02 PM</td>
+				<td class='step-details'>
+						Message title and body content edited then clicked on Send button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:05:41 PM</td>
+				<td class='step-details'>
+						Message sent and clicked on Arkiv-sent, clicked on sent mail
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:05:48 PM</td>
+				<td class='step-details'>
+						Teacher selected from Kotakt
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sent_message_from_sendt.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sent_message_from_sendt.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/sent_message_from_sendt.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:05:54 PM</td>
+				<td class='step-details'>
+						Test case Pass
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:06:02 PM</td>
+				<td class='step-details'>
+						Logged out successfully
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1987_TC001</span>
+						<span class='test-time'>Jun 12, 2020 09:06:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:06:08 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:06:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Parent sends an absence message to the Teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:06:08 PM</td>
+				<td class='step-details'>
+						Starting Login of Parent(25129395276)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:07:41 PM</td>
+				<td class='step-details'>
+						Log in as Parent - 25129395276 is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:07:48 PM</td>
+				<td class='step-details'>
+						Parent App - Foresatte login completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parentapp-foresatte-absence-msg.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parentapp-foresatte-absence-msg.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/parentapp-foresatte-absence-msg.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:08:00 PM</td>
+				<td class='step-details'>
+						Clicked on Ny Melding(new message) to write a absence message to the Teacher(inlaa014)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:08:06 PM</td>
+				<td class='step-details'>
+						Clicked on Meld fravær to create absence message
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:08:08 PM</td>
+				<td class='step-details'>
+						Selected Student alana041 to send absence message to Teacher inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:08:17 PM</td>
+				<td class='step-details'>
+						Selected Absence duration as 'I Dag' and clicked on Send Button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:08:58 PM</td>
+				<td class='step-details'>
+						Verified that Absence Message is successfully sent to Teacher in Arkiv Sendt folder
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:09:00 PM</td>
+				<td class='step-details'>
+						Absence message sent to teacher
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/absence_msg.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/absence_msg.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/absence_msg.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:09:18 PM</td>
+				<td class='step-details'>
+						Successfully logged out from Parent(25129395276)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:11:18 PM</td>
+				<td class='step-details'>
+						inlaa014 logged in successfully in elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:11:51 PM</td>
+				<td class='step-details'>
+						Clicked and opened Arkiv folder to check received email from Parent
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:12:03 PM</td>
+				<td class='step-details'>
+						Absence Message received and verified successfully in Teacher(inlaa014)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:12:11 PM</td>
+				<td class='step-details'>
+						Verification Completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/absence_msg_teacher.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/absence_msg_teacher.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/absence_msg_teacher.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:12:11 PM</td>
+				<td class='step-details'>
+						Verification Completed and test case result is PASS
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1989_TC001</span>
+						<span class='test-time'>Jun 12, 2020 09:12:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:12:16 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:12:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-desc'>Logg inn verification as a Student </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:12:16 PM</td>
+				<td class='step-details'>
+						Starting Login of alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:14:01 PM</td>
+				<td class='step-details'>
+						alana041 logged in successfully in elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:14:04 PM</td>
+				<td class='step-details'>
+						Login as Student completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Student Login.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Student Login.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Student Login.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:14:04 PM</td>
+				<td class='step-details'>
+						Verification Completed and Status is PASS
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1989_TC002</span>
+						<span class='test-time'>Jun 12, 2020 09:14:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:14:09 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:14:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Logg inn verification as a Teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:14:09 PM</td>
+				<td class='step-details'>
+						Starting Login of inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:15:59 PM</td>
+				<td class='step-details'>
+						inlaa014 logged in successfully in elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:16:05 PM</td>
+				<td class='step-details'>
+						Login as Teacher completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Teacher Login.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Teacher Login.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Teacher Login.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:16:05 PM</td>
+				<td class='step-details'>
+						Verification Completed and Status is PASS
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1989_TC003</span>
+						<span class='test-time'>Jun 12, 2020 09:16:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:16:09 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:16:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Logg inn verification as Parent </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:16:09 PM</td>
+				<td class='step-details'>
+						Starting Login of Parent(25129395276)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:17:39 PM</td>
+				<td class='step-details'>
+						Parent(25129395276) logged in successfully in Foresatte app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:17:43 PM</td>
+				<td class='step-details'>
+						Login as Parent completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Parent Login.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Parent Login.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/Parent Login.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:17:43 PM</td>
+				<td class='step-details'>
+						Verification Completed and Status is PASS
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1990_TC001</span>
+						<span class='test-time'>Jun 12, 2020 09:17:54 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:17:54 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:17:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send Reply from Teacher to Student </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:19:33 PM</td>
+				<td class='step-details'>
+						alana041 logged in successfully in elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:19:42 PM</td>
+				<td class='step-details'>
+						Clicked on Ny Melding(new message) to write a message to the Teacher(inlaa014)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:19:45 PM</td>
+				<td class='step-details'>
+						Clicked on Till(to) button to select the receipent teacher name from contact list
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:19:45 PM</td>
+				<td class='step-details'>
+						Clicked on Velg Skole(select school) drop down and schools list displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:19:45 PM</td>
+				<td class='step-details'>
+						Clicked on CGI testgrunnskole from schools drop down options
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:20:05 PM</td>
+				<td class='step-details'>
+						Clicked and selected the Teacher(Inger Laerer) from receiver list and clicked on OK button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:20:08 PM</td>
+				<td class='step-details'>
+						Teacher selected from Kotakt
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/TC_UDEMA_1990_TC_001_teacher_selected.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/TC_UDEMA_1990_TC_001_teacher_selected.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/TC_UDEMA_1990_TC_001_teacher_selected.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:20:18 PM</td>
+				<td class='step-details'>
+						Clicked on Emne and entered message title and message body text then clicked on Send button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:21:00 PM</td>
+				<td class='step-details'>
+						Clicked on Arkiv(archives), Search for sent message in Sendt folder and opening sent message is successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:21:00 PM</td>
+				<td class='step-details'>
+						Student alana041 sent message successfully to teacher
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:21:16 PM</td>
+				<td class='step-details'>
+						Log out from Student(alana041) is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:22:31 PM</td>
+				<td class='step-details'>
+						Log in as Teacher - inlaa014 is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:22:49 PM</td>
+				<td class='step-details'>
+						Click and opened Arkive(Archives) folder
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:23:12 PM</td>
+				<td class='step-details'>
+						Click on Mottatt folder to check received messages
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:24:18 PM</td>
+				<td class='step-details'>
+						Search for message from Studentalana041 and Open received message
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:24:18 PM</td>
+				<td class='step-details'>
+						Successfully opened message from Student alana041
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:24:47 PM</td>
+				<td class='step-details'>
+						Sending Reply to Received message
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:24:47 PM</td>
+				<td class='step-details'>
+						Sending reply to received message from student(alana041 is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:25:03 PM</td>
+				<td class='step-details'>
+						Logged out from Teacher(inlaa014) successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:25:03 PM</td>
+				<td class='step-details'>
+						Starting relogin of Student(alana041) to verify reply from Teacher(inlaa014)
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:26:09 PM</td>
+				<td class='step-details'>
+						Test Execution Failed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_teacher_to_student.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_teacher_to_student.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_teacher_to_student.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:26:09 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Relogin into Student to verify reply from teacher
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1990_TC002</span>
+						<span class='test-time'>Jun 12, 2020 09:26:10 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:26:10 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:26:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send Reply from Student to Teacher </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:28:01 PM</td>
+				<td class='step-details'>
+						inlaa014 logged in successfully in elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:28:10 PM</td>
+				<td class='step-details'>
+						Clicked on Ny Melding(new message) to write a message to the Student(alana041)
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:28:16 PM</td>
+				<td class='step-details'>
+						Verification Completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_student_to_teacher.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_student_to_teacher.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_student_to_teacher.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:28:16 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Clicking Svar av toggle button
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>UDEMA_1990_TC003</span>
+						<span class='test-time'>Jun 12, 2020 09:28:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 12, 2020 09:28:20 PM</span>
+	<span class='label end-time'>Jun 12, 2020 09:28:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-desc'>Send Reply to Teacher from Parent </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:30:06 PM</td>
+				<td class='step-details'>
+						inlaa014 logged in successfully in elev app
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:30:14 PM</td>
+				<td class='step-details'>
+						Clicked on Ny Melding(new message) to write a message to the Parent(25129395276)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:30:18 PM</td>
+				<td class='step-details'>
+						Clicking on Svar av button to enable reply
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:30:22 PM</td>
+				<td class='step-details'>
+						Clicked on Till(to) button to select the receipent student name from contact list
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:30:25 PM</td>
+				<td class='step-details'>
+						Clicked on Velg Skole(select school) drop down and schools list displayed
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:30:28 PM</td>
+				<td class='step-details'>
+						Clicked on CGI testgrunnskole from schools drop down options
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:30:33 PM</td>
+				<td class='step-details'>
+						Clicked on Personer tab
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:30:51 PM</td>
+				<td class='step-details'>
+						Searched student alana041 in search box
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:31:11 PM</td>
+				<td class='step-details'>
+						Clicked on student alana041 and selected Eleven + Foresatte checkbox
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:31:14 PM</td>
+				<td class='step-details'>
+						Student selected from Personar
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/TC_UDEMA_1990_TC_002_student_selected.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/TC_UDEMA_1990_TC_002_student_selected.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/TC_UDEMA_1990_TC_002_student_selected.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:31:26 PM</td>
+				<td class='step-details'>
+						Clicked on Emne and entered message title and message body text then clicked on Send button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:32:15 PM</td>
+				<td class='step-details'>
+						Clicked on Arkiv(archives), Search for sent message in Sendt folder and opening sent message is successfull
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:32:15 PM</td>
+				<td class='step-details'>
+						Teacher inlaa014 sent message successfully to parent
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:32:29 PM</td>
+				<td class='step-details'>
+						Logged out from Teacher inlaa014 successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:34:13 PM</td>
+				<td class='step-details'>
+						Log in as Parent - 25129395276 is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:34:32 PM</td>
+				<td class='step-details'>
+						Click and opened Arkive(Archives) folder
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:34:50 PM</td>
+				<td class='step-details'>
+						Click on Mottatt folder to check received messages
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:35:58 PM</td>
+				<td class='step-details'>
+						Search for message from Teacherinlaa014 and Open received message
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:35:58 PM</td>
+				<td class='step-details'>
+						Successfully opened message from Teacher inlaa014
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:36:30 PM</td>
+				<td class='step-details'>
+						Sending Reply to Received message
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:36:30 PM</td>
+				<td class='step-details'>
+						Sending reply to received message from parent (25129395276 is successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:36:45 PM</td>
+				<td class='step-details'>
+						Logged out from Parent 25129395276 successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>9:36:51 PM</td>
+				<td class='step-details'>
+						Starting relogin of Teacher(inlaa014) to verify reply from Parent(25129395276)
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:38:30 PM</td>
+				<td class='step-details'>
+						Verification Completed
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_parent_to_teacher.png' src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_parent_to_teacher.png' data-src='/Users/manjunaths/Desktop/Manju/FW_Improvements/03-Jun-2020/Backup-Code- Manju-3-June-2020/ude_mobile_android/screenshots/reply_from_parent_to_teacher.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>9:38:30 PM</td>
+				<td class='step-details'>
+						Test Case Failed while Relogin in as Teacher to check Reply from Parent
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>16</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jun 12, 2020 08:24:31 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jun 12, 2020 09:38:30 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>1h 13m 58s+710ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host name</td>
+								<td>localhost</td>
+							</tr>
+							<tr>
+								<td>Environemnt</td>
+								<td>Test</td>
+							</tr>
+							<tr>
+								<td>user</td>
+								<td>Ramana</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 16,
+				passParent: 8,
+				failParent: 8,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 8,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "UDEMA_1984_TC001":0,"UDEMA_1984_TC003":0,"UDEMA_1984_TC004":0,"UDEMA_1984_TC005":0,"UDEMA_1984_TC006":0,"UDEMA_1984_TC007":0,"UDEMA_1986_TC001":0,"UDEMA_1986_TC002":0.001,"UDEMA_1986_TC003":0,"UDEMA_1987_TC001":0,"UDEMA_1989_TC001":0.001,"UDEMA_1989_TC002":0,"UDEMA_1989_TC003":0,"UDEMA_1990_TC001":0,"UDEMA_1990_TC002":0,"UDEMA_1990_TC003":0
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/c23457b/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+			
+      
+        $(document).ready(function() {
+          
+        });
+      
+    
+		</script>
+	</body>
+</html>
